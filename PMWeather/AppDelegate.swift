@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
         self.window!.backgroundColor = UIColor.whiteColor()
+        
+        var rootVC = WeatherViewController()
+        
+        var navigationViewController = UINavigationController(rootViewController: rootVC)
+
+        self.window!.rootViewController = navigationViewController
         self.window!.makeKeyAndVisible()
         return true
     }
